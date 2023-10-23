@@ -77,6 +77,10 @@ print(x.lower())
 x=" ciao sono luca "
 print(x.strip())  #toglie lo spazio davanti e in fondo
 print(x.replace("o","W")) #ciaW sWnW luca
+print(x.split(","))     #["ciao","sono","luca"]
+
+#si possono usare """  """ per identificare una stringa multiline
+
 
 #combinare stringhe e numeri 
 x=23

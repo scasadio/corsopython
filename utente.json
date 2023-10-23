@@ -1,40 +1,92 @@
-{"info":
-[{
-    "id":"555",
-    "nome":"luca",
-    "cognome":"rossi",
-    "codiceFiscale": "RSSLCU38A17A787Z",
-    "sposato":false,
-    "online":true,
-    "eta":25,
-    "indirizzo":{
-        "via":"via delle vie 8",
-        "citta":"milano",
-        "provincia":"MI",
-        "codicePostale":"20121"
-   },
-   "recapiti":{
-       "email":["qwerty@gmail.com","luca.rossi@gmail.com"],
-       "telefono":[{
-           "tipo":"ufficio",
-           "numero":"1234567788"
-       },
-       {
-           "tipo":"cellulare",
-           "numero":"1233445678"
-       }]
-   },
-   "amici":[{
-           "nome":"mario",
-           "cognome":"verdi",
-            "amici":[{
-                "nome":"anna",
-                "cognome":"gialla"
-            }]
-    }]
-},
 {
-    "id":"556",
-    "nome":"leonardo"
-}]
+   "utenti": [
+      {
+         "id": "555",
+         "nome": "luca",
+         "cognome": "rossi",
+         "codiceFiscale": "RSSLCU38A17A787Z",
+         "sposato": false,
+         "online": true,
+         "eta": 25,
+         "indirizzo": {
+            "via": "via delle vie 8",
+            "citta": "milano",
+            "provincia": "MI",
+            "codicePostale": 20121
+         },
+         "recapiti": {
+            "email": [
+               "qwerty@gmail.com",
+               "luca.rossi@gmail.com"
+            ],
+            "telefono": [
+               {
+                  "tipo": "ufficio",
+                  "numero": "1234567788"
+               },
+               {
+                  "tipo": "cellulare",
+                  "numero": "1233445678"
+               }
+            ]
+         },
+         "amici": [
+            {
+               "nome": "mario",
+               "cognome": "verdi",
+               "amici": [
+                  {
+                     "nome": "anna",
+                     "cognome": "gialla"
+                  }
+               ]
+            }
+         ]
+      },
+      {
+         "id": "556",
+         "nome": "leonardo"
+      },
+      {
+         "id": "777",
+         "nome": "anna",
+         "cognome": "bianchi",
+         "codiceFiscale": "BNCNNA93R43D199P",
+         "sposato": true,
+         "online": true,
+         "eta": 30,
+         "indirizzo": {
+            "via": "via maggiore 16",
+            "citta": "bologna",
+            "provincia": "BO",
+            "codicePostale": 48126
+         },
+         "recapiti": {
+            "email": [
+               {
+                  "tipo": "personale",
+                  "mail": "poiuyt@gmail.com"
+               },
+               {
+                  "tipo": "istituzionale",
+                  "mail": "anna.bianchi30@studio.unibo.it"
+               }
+            ],
+            "telefono": {
+               "tipo_cell": "cellulare",
+               "numero": "9987654321"
+            }
+         },
+         "amici": [
+            {
+               "nome": "lucia",
+               "cognome": "neri"
+            },
+            {
+               "nome": "matilde",
+               "cognome": "fucsia"
+            }
+         ]
+      }
+   ]
 }
