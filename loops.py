@@ -1,9 +1,12 @@
+########
 ### IF ELSE (min 1h26)
 #operatori di comparazione
-#== uguale
-#!= diverso
-#>=
-#<=
+# Equals                    |a == b
+# Not Equals                |a != b
+# Less than                 |a < b
+# Less than or equal to     |a <= b
+# Greater than              |a > b
+# Greater than or equal to  |a >= b
 
 #opertori logici
 #_and
@@ -40,6 +43,11 @@ else:
 if x>10: print("maggiore") #funziona solo con un singolo statement (quindi una sola riga di codice successiva a :)
 print("maggiore") if x>10 and y<10  else print("minore")
 
+a = 10
+b = 10
+print("A") if a > b else print("=") if a == b else print("B")
+
+
 #if nested
 if x %2 == 0:
     print("numero pari")  #so che un numero pari diviso per due da resto 0 quindi %=0
@@ -49,10 +57,57 @@ else:
 if x%2==0:
     if x>10:
         print("numero pari e maggiore")
+    else:
+        print("numero pari e minore")       #elif x<10:
 else:
     print("numero dispari")
 
 
+x=15
+if x>10:
+    print("maggiore 10"),
+    if x>20:
+        print("maggiore 20"),
+    else:
+        print("tra 10 e 20"),
+else:
+    print("minore 10")
+
+
+x=23
+if x>10:
+    if x>20 and x%2==0:
+        print("maggiore 20 e pari"),
+    elif x>20 and x%2!=0:
+        print("mggiore 20 dispari"),
+    elif x%2!=0:
+        print("tra 10 e 20 dispari"),
+    else:
+        print("tra 10 e 20 pari"),
+elif x%2==0:
+    print("minore 10 pari"),
+else:
+    print("minre di 10 dispari")
+
+
+if x>10:
+    if x>20:
+        if x%2==0:
+            print("maggiore 20 e pari")
+        else:
+            print("maggiore 20 dispari"),
+    elif x%2==0:
+        print("tra 10 e 20 pari"),
+    else:
+        print("tra 10 e 20 dispari"),
+elif x%2==0:
+    print("minore di 10 pari"),
+else:
+    print("minore 10 dispari")
+
+
+
+######
 ###WHILE LOOP (min 1h50)
 x=["roma","milano","napoli"]
 i=0
@@ -66,7 +121,7 @@ while i<6:
     print(i)
     if i==3:
         break
-    i+=1
+    i+=1     #aumentando di uno in uno fino al 6 il ciclo si ferma al 3   
 
 #continue
 i=0
@@ -79,6 +134,8 @@ else:
     print("finito")
 
 
+
+########
 ###FOR LOOP
 lista_citta=["roma","milano","napoli"]
 for citta in lista_citta: #per ogni elemento in collezione di elementi
@@ -86,6 +143,8 @@ for citta in lista_citta: #per ogni elemento in collezione di elementi
 
 stringa="anguria"
 for lettera in stringa:
+    if lettera=="g":
+        break
     print(lettera)
 
 for x in range(6):
@@ -95,26 +154,18 @@ for x in range(6):
 else:
     print("finito")
 
+for x in range(2,30,3):
+    print(x)        #ritorna valori da 2 a 29 con salti di 3
 
+
+for x in [0, 1, 2]:
+    pass     #il pass evita che il ciclo vuoto ritorni un errore
+
+
+#nested cicle
 for riga in range(6):
     for colonna in range(2):
         print("("+str(riga)+":"+str(colonna)+")")
-
-
-###INTRODUZIONE ALLE COLLEZIONI DI DATI (min 2h13)
-#una collezione di valori che fa riferimento ad una variabile
-#spiegazione termini:
-    #ordinato: la collezione ha un ordine ben definito e l'aggiunta di elementi incide
-    #indicizzato: possiamo accedere agli elementi tramite indice
-    #modificabile: possiamo aggiungere, cambiare e rimuovere elementi una volta creata la collezione
-    #immutabile: non possiamo aggiungere, cambiare e rimuovere elementi
-    #permete duplicazioni: possono esserci più elementi con lo stesso valore
-
-citta=["udine","roma","milano","napoli","venezia"] #ordinato, se aggiungo elementi cambia l'indice della posizione 
-
-#le liste sono collezioni ordinate (e quindi indicizzati), modificabili, permettono duplicati
-#le tuple sono collezioni ordiate, immutabili, permettono duplicati
-#i set sono collezioni non ordinate e percio non indicizzate, non permettono duplicati
-#i dictionary sono collezioni ordinate e modificabili, non permettono duplicati.
+        #ritorna tutte le possibili combinazioni di riga:colonna 
 
 
