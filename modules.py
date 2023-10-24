@@ -4,7 +4,7 @@
 import modulo
 modulo.saluta("luca")
 
-x=modulo.persona1["nome"]
+x=modulo.persona1["cognome"]
 modulo.saluta(x)
 
 #creare un alias
