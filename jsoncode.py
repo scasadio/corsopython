@@ -115,5 +115,69 @@ with open (file,"r") as json_file:
      data=json.load(json_file)
      data["utenti"].append(utente2)
 
+
+
+###############
 with open(file,"w") as json_file:
     json.dump(data,json_file,indent=3)
+import json
+gen="generated.json"
+with open (gen,"r") as json_file:
+    file=json.load(json_file)
+
+data=json.dumps(file,indent=4, sort_keys=True)    #sostiutiamo le , con i . e i : con =
+print(data)   
+
+
+import json
+luca="lucaRossi.json"
+
+with open (luca,"r") as json_file:
+    data=json.load(json_file)
+
+for key,value in data.items():
+    # print(f'{key} : {value}')
+    if key=="amici":
+        print(value)
+
+
+file="utente.json"
+with open (file,"r") as json_file:
+    data=json.load(json_file)
+dati=data["utenti"]
+data=dati[0]
+print(data)
+
+
+for key,value in data.items():
+    # print(f'{key} : {value}')
+    if key=="amici":
+        print(value)
+
+
+
+
+########esercizio
+log='157.245.75.203 - - [24/Oct/2023:02:04:23 +0200] "GET /robots.txt HTTP/1.0" 404 4997 "-" "SafeDNSBot (https://www.safedns.com/searchbot)"'
+
+ip=log[0:14]
+Timestamp=log[20:46]
+Verbo_Http=log[49:52]
+risorsa=log[54:64]
+versione=log[65:73]
+
+print(ip)
+print(Timestamp)
+print(Verbo_Http)
+print(risorsa)
+print(versione)
+
+
+substring=log[49:73]
+parole=substring.split(" ")
+print(parole)
+
+Verbo_Http=parole[0]
+risorsa=parole[1]
+versione=parole[2]
+
